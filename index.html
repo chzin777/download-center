@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centra de Downloads - R3</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header><a href="index.html">Central de Downloads</a></header>
+  </div>
+
+  <div class="cards-container">
+    <a
+      href="https://download947.mediafire.com/01hegr36njtgvDKLEXOfijTM-6k0J695MucacXRhVj-GCoDQthcikOFKxfA5P7ayA6gJwuik9nee7HauavbVnjv4IOWBisYv1vUBZrrOfcePM-fZkJgcaxw6sUqk80zkLWtb1g5v3g119zRoo9W5OTV7GPOrC5dpi7zISbltJarIUg/h3xit96g4yn3o3s/VivoVozNegocio.exe">
+      <div class="card">
+        <img src="imgs/vivo.png" alt="Logo Vivo">
+      </div>
+    </a>
+    <a href="https://releases.graphon.com/6.x/6.2/6.2.6.33307/AppController.AllUsers.exe">
+      <div class="card">
+        <img src="imgs/app.png" alt="Logo App AppController">
+      </div>
+    </a>
+    <a
+      href="https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64">
+      <div class="card">
+        <img src="imgs/discord.png" alt="Logo Discord">
+      </div>
+    </a>
+    <a
+      href="https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=O365ProPlusRetail&platform=x64&language=pt-br&version=O16GA">
+      <div class="card">
+        <img src="imgs/office.png" alt="Logo Office">
+      </div>
+    </a>
+    <a href="https://support.brother.com/g/b/downloadhowto.aspx?c=br&lang=pt&prod=mfc8952dw_us&os=10068&dlid=dlf004896_000&flang=47&type3=11"
+      target="_blank">
+      <div class="card">
+        <img src="imgs/brother-logo.png" alt="Logo Brother">
+      </div>
+    </a>
+    <a href="https://dl.konicaminolta.eu/pt/?tx_kmdownloadcentersite_downloadproxy[fileId]=e0d0747bf790b7ab508a69825b773422&tx_kmdownloadcentersite_downloadproxy[documentId]=139539&tx_kmdownloadcentersite_downloadproxy[system]=KonicaMinolta&tx_kmdownloadcentersite_downloadproxy[language]=EN&type=1558521685"
+      target="_blank">
+      <div class="card">
+        <img src="imgs/konica.png" alt="Logo Konica" style="width: 200px;">
+      </div>
+    </a>
+
+    <div id="copied-toast" class="toast">Comando copiado com sucesso!</div>
+
+  </div>
+  <div class="button-container">
+    <div class="button" id="copy-button" data-text="irm https://massgrave.dev/get | iex" data-tooltip="Copiar">
+      <div class="button-wrapper">
+        <div class="text">Ativador Win 11/10 & Office</div>
+        <span class="icon">
+          <!-- Ícone SVG de copiar -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h11v16z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="button-container" style="margin-top: -30px;">
+    <div class="button" id="copy-button" data-text="r3suprimentos188810.winthor.cloudtotvs.com.br:491" data-tooltip="Copiar">
+      <div class="button-wrapper">
+        <div class="text">Link de Acesso WinThor</div>
+        <span class="icon">
+          <!-- Ícone SVG de copiar -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1zm3 4H8a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 18H8V7h11v16z" />
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  document.getElementById('copy-button').addEventListener('click', function () {
+    const textToCopy = this.getAttribute('data-text');
+
+    navigator.clipboard.writeText(textToCopy).then(() => {
+      const toast = document.getElementById('copied-toast');
+      toast.classList.add('show');
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000); // some depois de 3 segundos
+    }).catch(err => {
+      console.error('Erro ao copiar texto: ', err);
+    });
+  });
+</script>
+
+</html>
