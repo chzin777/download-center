@@ -113,6 +113,25 @@ header a {
 }
 
 .cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.cardcontainerup {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas */
+    justify-items: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cardcontainerdown {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* 3 colunas */
@@ -125,7 +144,7 @@ header a {
 }
 
 .button {
-    --width: 400px;
+    --width: 700px;
     --height: 35px;
     --tooltip-height: 35px;
     --tooltip-width: 90px;
